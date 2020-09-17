@@ -9,19 +9,19 @@ n, s, e, w = 1, -1, 1, -1
 def start_tile(x_hnit, y_hnit):
     victory = False
     if x_hnit == 1 and y_hnit ==1:         #1,1
-        dir_map = "(N)orth"
+        dir_map = "(N)orth."
         valid_input = "n"
     
     elif x_hnit == 1 and y_hnit == 2:      #1,2
-        dir_map = "(N)orth or (E)ast or (S)outh"
+        dir_map = "(N)orth or (E)ast or (S)outh."
         valid_input = "s", "e", "n"
 
     elif x_hnit == 1 and y_hnit == 3:      #1,3
-        dir_map = "(E)ast or (S)outh"
+        dir_map = "(E)ast or (S)outh."
         valid_input = "s", "e"
     
     elif x_hnit == 2 and y_hnit == 3:      #2,3
-        dir_map = "(E)ast or (W)est"
+        dir_map = "(E)ast or (W)est."
         valid_input = "w", "e"
 
     elif x_hnit == 2 and y_hnit == 2:      #2,2
@@ -29,20 +29,20 @@ def start_tile(x_hnit, y_hnit):
         valid_input = "w", "s"
     
     elif x_hnit == 2 and y_hnit == 1:      #2,1
-        dir_map = "(N)orth"
+        dir_map = "(N)orth."
         valid_input = "n"
 
     elif x_hnit == 3 and y_hnit == 1:      #3,1
-        dir_map = "(N)orth"
+        dir_map = "(N)orth."
         valid_input = "n"
         victory = True
 
     elif x_hnit == 3 and y_hnit == 2:      #3,2
-        dir_map = "(N)orth or (S)outh"
+        dir_map = "(N)orth or (S)outh."
         valid_input = "n", "s"
 
     elif x_hnit == 3 and y_hnit == 3:      #3,3
-        dir_map = "(S)outh or W)est"
+        dir_map = "(S)outh or (W)est."
         valid_input = "w", "s"
     return dir_map, valid_input, victory
 
