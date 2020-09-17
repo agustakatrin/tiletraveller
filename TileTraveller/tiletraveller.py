@@ -44,4 +44,41 @@ def start_tile(x_hnit, y_hnit):
     elif x_hnit == 3 and y_hnit == 3:      #3,3
         dir_map = "(W)est, (S)outh"
         valid_input = "w", "s"
+    return dir_map, valid_input, victory
+
+def dir_invalid():
+    print("Not a valid direction!")
+
+
+def play(my_dir, valid_dir, x, y):
+    
+    if(my_dir in valid_dir):
+
+        if my_dir == "s" or my_dir == "n":
+            y += int(my_dir)
+        
+        else: 
+            x += int(my_dir)
+    
+    else:
+        dir_invalid
+    
+    return x, y
+
+def input(valid_dir):
+
+    dir = input("Direction: ").lower()
+
+    while dir not in valid_dir:
+        dir_invalid()
+        dir = input("Direction: ").lower()
+    return dir
+
+def guide(possible_dir, victory):
+    
+    if victory = True:
+        print("Victory!")
+    else:
+        print("You can travel: ", possible_dir)
+
 
