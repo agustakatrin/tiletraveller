@@ -25,7 +25,7 @@ def start_tile(x_hnit, y_hnit):
         valid_input = "w", "e"
 
     elif x_hnit == 2 and y_hnit == 2:      #2,2
-        dir_map = "(S)outh or (W)est"
+        dir_map = "(S)outh or (W)est."
         valid_input = "w", "s"
     
     elif x_hnit == 2 and y_hnit == 1:      #2,1
@@ -48,7 +48,8 @@ def start_tile(x_hnit, y_hnit):
 
 def dir_invalid():
     print("Not a valid direction!")
-
+    
+    return print("You can travel: " + dir_map)
 
 def mover(my_dir, valid_dir, x, y):
     
@@ -92,5 +93,3 @@ while 1:
     direction = input_letter(valid_input)
 
     x_start, y_start = mover(direction, valid_input, x_start, y_start)
-
-    
